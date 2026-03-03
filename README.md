@@ -40,10 +40,19 @@ pnpm run create -- my-product \
   --region europe-west1
 ```
 
-3. Run it locally.
+3. Configure environment variables.
 
 ```bash
 cd my-product
+cp apps/web/.env.example apps/web/.env.local
+cp services/api/.env.example services/api/.env
+cp services/worker/.env.example services/worker/.env
+cp apps/mobile/.env.example apps/mobile/.env
+```
+
+4. Run it locally.
+
+```bash
 pnpm install
 docker compose up -d
 pnpm dev
@@ -56,6 +65,12 @@ Result:
 
 Detailed init reference:
 - [docs/INIT_GUIDE.md](docs/INIT_GUIDE.md)
+
+Environment templates included:
+- `apps/web/.env.example`
+- `services/api/.env.example`
+- `services/worker/.env.example`
+- `apps/mobile/.env.example`
 
 ## Create Presets
 
