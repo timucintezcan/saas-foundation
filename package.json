@@ -1,0 +1,33 @@
+{
+  "name": "saas-foundation",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "create": "tsx scripts/create.ts",
+    "bootstrap": "tsx scripts/bootstrap.ts",
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "dev:web": "turbo run dev --filter=@saas-foundation/web",
+    "dev:mobile": "turbo run dev --filter=@saas-foundation/mobile",
+    "dev:api": "turbo run dev --filter=@saas-foundation/api",
+    "dev:worker": "turbo run dev --filter=@saas-foundation/worker",
+    "build:web": "turbo run build --filter=@saas-foundation/web",
+    "build:mobile": "turbo run build --filter=@saas-foundation/mobile",
+    "build:api": "turbo run build --filter=@saas-foundation/api",
+    "build:worker": "turbo run build --filter=@saas-foundation/worker",
+    "lint:web": "turbo run lint --filter=@saas-foundation/web",
+    "lint:mobile": "turbo run lint --filter=@saas-foundation/mobile",
+    "lint:api": "turbo run lint --filter=@saas-foundation/api",
+    "lint:worker": "turbo run lint --filter=@saas-foundation/worker",
+    "lint:shared": "turbo run lint --filter=@saas-foundation/shared",
+    "lint:ui": "turbo run lint --filter=@saas-foundation/ui"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "turbo": "^2.4.2",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@saas-foundation/shared": ["../../packages/shared/src/index.ts"],
+      "@saas-foundation/ui": ["../../packages/ui/dist/index.d.ts"],
+      "@saas-foundation/ui/native": ["../../packages/ui/dist/native.d.ts"],
+      "@saas-foundation/ui/tokens": ["../../packages/ui/dist/tokens.d.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@saas-foundation/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1 -p 3000",
+    "build": "next build",
+    "lint": "echo 'web lint placeholder'"
+  },
+  "dependencies": {
+    "@saas-foundation/shared": "workspace:*",
+    "@saas-foundation/ui": "workspace:*",
+    "framer-motion": "^12.4.7",
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.17",
+    "xstate": "^5.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "typescript": "^5.7.3"
+  }
+}

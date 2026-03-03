@@ -1,0 +1,34 @@
+{
+  "projectName": "my-saas",
+  "packageScope": "@myorg",
+  "features": {
+    "web": true,
+    "mobile": true,
+    "billing": "stripe",
+    "auth": "none"
+  },
+  "infra": {
+    "backendCloud": "gcp",
+    "frontendCloud": "firebase",
+    "useObjectStorage": true,
+    "primaryDataStore": "relational",
+    "objectStorageProvider": "gcs",
+    "mobileRelease": "expo-eas",
+    "region": "europe-west1",
+    "webDeployTarget": "firebase",
+    "apiDeployTarget": "cloud-run",
+    "workerDeployTarget": "cloud-run",
+    "databaseMode": "managed",
+    "redisMode": "managed",
+    "secretsBackend": "gcp-secret-manager"
+  },
+  "ui": {
+    "themePreset": "clean",
+    "colorMode": "dark",
+    "accentColor": "#3f8cff",
+    "radiusStyle": "soft",
+    "buttonStyle": "solid",
+    "density": "comfortable",
+    "motionLevel": "subtle"
+  }
+}
