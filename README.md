@@ -49,6 +49,8 @@ docker compose up -d
 pnpm dev
 ```
 
+Detailed init reference: [docs/INIT_GUIDE.md](https://github.com/timucintezcan/saas-foundation/blob/main/docs/INIT_GUIDE.md)
+
 Result:
 - A new SaaS project folder is created with web/mobile/api/worker/shared packages.
 - `template.config.json` is generated from your inputs.
@@ -57,14 +59,14 @@ Result:
 ## Agent Playbooks (Codex + Claude)
 
 Shared, agent-agnostic playbooks live in:
-- [docs/agent-playbooks/foundation-scaffold-guardian.md](/Users/ttezcan/Documents/saas-foundation/docs/agent-playbooks/foundation-scaffold-guardian.md)
-- [docs/agent-playbooks/saas-bootstrap-advisor.md](/Users/ttezcan/Documents/saas-foundation/docs/agent-playbooks/saas-bootstrap-advisor.md)
-- [docs/agent-playbooks/release-readiness-checker.md](/Users/ttezcan/Documents/saas-foundation/docs/agent-playbooks/release-readiness-checker.md)
-- [docs/agent-playbooks/deploy-profile-writer.md](/Users/ttezcan/Documents/saas-foundation/docs/agent-playbooks/deploy-profile-writer.md)
+- [docs/agent-playbooks/foundation-scaffold-guardian.md](docs/agent-playbooks/foundation-scaffold-guardian.md)
+- [docs/agent-playbooks/saas-bootstrap-advisor.md](docs/agent-playbooks/saas-bootstrap-advisor.md)
+- [docs/agent-playbooks/release-readiness-checker.md](docs/agent-playbooks/release-readiness-checker.md)
+- [docs/agent-playbooks/deploy-profile-writer.md](docs/agent-playbooks/deploy-profile-writer.md)
 
 Agent-specific adapters:
-- Codex: [agents/codex/AGENTS.md](/Users/ttezcan/Documents/saas-foundation/agents/codex/AGENTS.md)
-- Claude: [agents/claude/CLAUDE.md](/Users/ttezcan/Documents/saas-foundation/agents/claude/CLAUDE.md)
+- Codex: [agents/codex/AGENTS.md](agents/codex/AGENTS.md)
+- Claude: [agents/claude/CLAUDE.md](agents/claude/CLAUDE.md)
 
 Example prompts:
 - "Use bootstrap advisor and generate the best create command for backend AWS + frontend Firebase."
@@ -107,4 +109,4 @@ pnpm bootstrap --project-name my-product --backend-cloud gcp --frontend-cloud fi
 ```
 
 Full parameter docs:
-- [docs/INIT_GUIDE.md](/Users/ttezcan/Documents/saas-foundation/docs/INIT_GUIDE.md)
+- [docs/INIT_GUIDE.md](docs/INIT_GUIDE.md)
