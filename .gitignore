@@ -143,3 +143,19 @@ vite.config.ts.timestamp-*
 
 .DS_Store
 .turbo/
+
+# Sensitive files
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.kdbx
+*.mobileprovision
+*.service-account.json
+*secrets*.json
+*.tfvars
+*.tfvars.json
+.npmrc
