@@ -43,9 +43,9 @@ When `useObjectStorage=true`, `objectStorageProvider` is auto-selected from `bac
 
 When `useObjectStorage=false`, provider falls back to `local`.
 
-### `primaryDataStore` (fixed)
+### `primaryDataStore` (default)
 - Value: `relational`
-- User input: none (fixed for Phase 1)
+- User input: none (defaults to relational in Phase 1)
 
 ### `region`
 - Type: `string`

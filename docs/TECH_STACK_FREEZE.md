@@ -81,7 +81,7 @@ Worker:
 - `backendCloud`
 - `frontendCloud`
 - `useObjectStorage`
-- `primaryDataStore` (fixed: `relational` in Phase 1)
+- `primaryDataStore` (default: `relational` in Phase 1)
 - `objectStorageProvider` (derived from backend cloud)
 - `mobileRelease`
 - `region`

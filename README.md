@@ -52,7 +52,7 @@ pnpm dev
 Result:
 - A new SaaS project folder is created with web/mobile/api/worker/shared packages.
 - `template.config.json` is generated from your inputs.
-- `primaryDataStore` is fixed to `relational` in Phase 1.
+- `primaryDataStore` defaults to `relational` in Phase 1.
 
 ## Agent Playbooks (Codex + Claude)
 
@@ -92,13 +92,80 @@ pnpm run create -- my-product \
 ```
 
 Primary data store is fixed for Phase 1:
-- `primaryDataStore` -> `relational` (no user input)
+- `primaryDataStore` defaults to `relational`
 
 Object storage mapping is automatic from `backendCloud`:
 - `gcp` -> `gcs`
 - `aws` -> `aws-s3`
 - `azure` -> `azure-blob`
 - `none` -> `local`
+
+
+## Prebuilt Scenarios
+
+### 1) Full Local (dev-first)
+
+```bash
+pnpm run create -- my-product \
+  --backend-cloud none \
+  --frontend-cloud none \
+  --use-object-storage false \
+  --region europe-west1
+```
+
+### 2) Backend GCP + Frontend Firebase
+
+```bash
+pnpm run create -- my-product \
+  --backend-cloud gcp \
+  --frontend-cloud firebase \
+  --use-object-storage true \
+  --mobile-release expo-eas \
+  --region europe-west1
+```
+
+### 3) Backend AWS + Frontend Firebase
+
+```bash
+pnpm run create -- my-product \
+  --backend-cloud aws \
+  --frontend-cloud firebase \
+  --use-object-storage true \
+  --mobile-release expo-eas \
+  --region eu-central-1
+```
+
+### 4) Backend AWS + Frontend Vercel
+
+```bash
+pnpm run create -- my-product \
+  --backend-cloud aws \
+  --frontend-cloud vercel \
+  --use-object-storage true \
+  --region eu-central-1
+```
+
+### 5) Backend Azure + Frontend Netlify
+
+```bash
+pnpm run create -- my-product \
+  --backend-cloud azure \
+  --frontend-cloud netlify \
+  --use-object-storage true \
+  --region westeurope
+```
+
+### 6) Web-Only Local
+
+```bash
+pnpm run create -- my-product \
+  --web true \
+  --mobile false \
+  --backend-cloud none \
+  --frontend-cloud none \
+  --use-object-storage false \
+  --region europe-west1
+```
 
 ## Bootstrap Current Folder
 
