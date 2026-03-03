@@ -28,6 +28,9 @@ pnpm install
 
 2. Generate a new product.
 
+Parameter reference: [docs/INIT_GUIDE.md](docs/INIT_GUIDE.md)
+Preset scenarios: [Create Presets](#create-presets)
+
 ```bash
 pnpm run create -- my-product \
   --backend-cloud gcp \
