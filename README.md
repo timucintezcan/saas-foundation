@@ -16,6 +16,70 @@ You start from a stable base and focus on product behavior, user flow, and busin
 - Local infra: Docker Compose (Postgres + Redis)
 - Bootstrap scripts for project generation
 
+
+## What You Get
+
+- Buildable monorepo scaffold (`apps`, `services`, `packages`)
+- Web app scaffold (Next.js)
+- Mobile app scaffold (Expo React Native)
+- API scaffold (NestJS)
+- Worker scaffold (BullMQ-style async worker)
+- Shared UI design system (`packages/ui`) with reusable primitives/components
+- Shared contracts package (`packages/shared`)
+- Local infra via Docker Compose (Postgres + Redis)
+- Create/bootstrap scripts for fast project generation
+- Environment templates for web/mobile/api/worker
+- Cloud-profile-aware config generation (`backendCloud`, `frontendCloud`)
+- Agent playbooks for Codex + Claude workflows
+
+## Who This Is For
+
+Use this template if you:
+- want to launch SaaS products quickly
+- prefer a consistent BE + FE + Mobile + UI foundation
+- want fewer early architecture decisions
+
+Not ideal if you:
+- want a minimal single-service starter only
+- need a fully production-ready infra stack on day one
+
+## 15-Minute Path
+
+1. Clone and install foundation dependencies
+2. Generate your product with `pnpm run create -- ...`
+3. Copy `.env.example` files and fill values
+4. Run `docker compose up -d`
+5. Run `pnpm dev`
+
+Outcome:
+- web/mobile/api/worker are scaffolded
+- shared UI and shared contracts are wired
+- project is ready for feature development
+
+## Architecture Snapshot
+
+```text
+apps/
+  web/        -> Next.js frontend
+  mobile/     -> Expo mobile app
+services/
+  api/        -> NestJS API
+  worker/     -> Background jobs
+packages/
+  ui/         -> Tokens + primitives + components
+  shared/     -> Shared types/schemas/constants
+```
+
+## Extensibility
+
+Configurable today:
+- `backendCloud`, `frontendCloud`, `useObjectStorage`, `region`
+- `web`, `mobile`, `mobileRelease`
+- UI defaults (`themePreset`, `colorMode`, `accentColor`, etc.)
+
+Current default:
+- `primaryDataStore` defaults to `relational` (Phase 1)
+
 ## End-User Quick Start
 
 1. Clone the foundation.
