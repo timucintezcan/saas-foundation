@@ -29,7 +29,7 @@ cd my-new-saas
 pnpm install
 ```
 
-2. Generate your new product from the template.
+2. Generate your new product from the template. Detailed init reference: [docs/INIT_GUIDE.md](https://github.com/timucintezcan/saas-foundation/blob/main/docs/INIT_GUIDE.md)
 
 ```bash
 pnpm run create -- my-product \
@@ -48,8 +48,6 @@ pnpm install
 docker compose up -d
 pnpm dev
 ```
-
-Detailed init reference: [docs/INIT_GUIDE.md](https://github.com/timucintezcan/saas-foundation/blob/main/docs/INIT_GUIDE.md)
 
 Result:
 - A new SaaS project folder is created with web/mobile/api/worker/shared packages.
