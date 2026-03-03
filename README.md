@@ -42,6 +42,8 @@ pnpm run create -- my-product \
 
 3. Configure environment variables.
 
+`*.env.example` files are templates. Copy them to real runtime env files, then replace placeholder values with your project values (API base URL, Firebase keys, GCP project/bucket, etc.).
+
 ```bash
 cd my-product
 cp apps/web/.env.example apps/web/.env.local
@@ -49,6 +51,12 @@ cp services/api/.env.example services/api/.env
 cp services/worker/.env.example services/worker/.env
 cp apps/mobile/.env.example apps/mobile/.env
 ```
+
+What to fill after copying:
+- `apps/web/.env.local`: web public runtime vars (`NEXT_PUBLIC_*`)
+- `apps/mobile/.env`: mobile public runtime vars (`EXPO_PUBLIC_*`)
+- `services/api/.env`: backend runtime vars (DB, Redis, cloud/storage config)
+- `services/worker/.env`: worker runtime vars (queue, storage, concurrency)
 
 4. Run it locally.
 
